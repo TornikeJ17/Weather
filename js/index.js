@@ -19,7 +19,7 @@ $(document).ready(function(){
             data: {q:city, appid: key, units: 'metric'},
 
             success: function(data){
-                console.log(data)
+                //console.log(data)
                     var wf = ''
                 $.each(data.weather, function(index,val){
                     

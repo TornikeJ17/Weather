@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap');
+
+body{
+    background: -webkit-linear-gradient(left, #7579ff, #b224ef);
+}
+* {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+input{
+    width: 55rem;
+    max-width: 100%;
+    height: 5rem;
+    border-radius: 0.3rem 0rem 0rem 0.3rem;
+    font-size: 3rem;
+    font-style: italic;
+    border: none;
+    outline: none;
+    color: #b224ef;
+    padding-left: 1rem;
+    opacity: 0.8;
+}
+
+button{
+    background-color: #fff;
+    border-radius: 0rem 0.3rem 0.3rem 0rem;
+    border: none;
+    color: #7579ff;
+    font-size: 3rem;
+    outline: none !important;
+    opacity: 0.8;
+}
+h1{
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 4rem;
+    font-family: 'Nunito', sans-serif;
+}
+h2{
+    color: #fff;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+img{
+    padding-left: 0.3rem;
+}
+.row{
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+.weather-block{
+margin-top: 2rem;
+margin-left: 7rem;
+width: 700px;
+max-width: 100%;
+background-image: url(./img/img.png);
+background-repeat: repeat-y;
+background-position: center;
+opacity: 100%;
+height: 350px;
+max-height: 100%;
+border-radius: 0.7rem;
+box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.celsius{
+   display: flex;
+   justify-content: flex-end;
+   margin-top: -13rem;
+   margin-right: 1rem;
+   color: #fff;
+   font-size: 8rem;
+}
+.clear-w{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+}
+i{
+    margin-right: 0.3rem;
+}
+.gradus-icon{
+    font-size: 4.5rem;
+    margin-top: 1.3rem;
+}
+.nav{
+    display: flex;
+    flex-wrap: row;
+    
+}
+ul{
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+li{
+    color: #fff;
+    font-size:  18px;
+    font-weight: 600;
+    list-style: none;
+    line-height: 2.5;
+    text-align: center;
+}
+.weather-icons{
+    font-size: 16px;
+}

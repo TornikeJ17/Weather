@@ -14,20 +14,12 @@ $(document).ready(function(){
         
         $.ajax({
             url: 'https://api.openweathermap.org/data/2.5/weather/',
-<<<<<<< HEAD
             datatype: 'xml',
-=======
-            datatype: 'json',
->>>>>>> af5224f90eb36a510d99478673fd0e3ccb890b5c
             type: 'GET',
             data: {q:city, appid: key, units: 'metric'},
 
             success: function(data){
-<<<<<<< HEAD
                 // console.log(data)
-=======
-                //console.log(data)
->>>>>>> af5224f90eb36a510d99478673fd0e3ccb890b5c
                     var wf = ''
                 $.each(data.weather, function(index,val){
                     

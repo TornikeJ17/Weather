@@ -13,18 +13,18 @@ $(document).ready(function(){
     
         
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather/',
-            datatype: 'json',
+            url: 'https://api.openweathermap.org/data/2.5/weather/',
+            datatype: 'xml',
             type: 'GET',
             data: {q:city, appid: key, units: 'metric'},
 
             success: function(data){
-                console.log(data)
+                // console.log(data)
                     var wf = ''
                 $.each(data.weather, function(index,val){
                     
                     wf += '<h2><b>' + data.name + ', ' +data.sys.country +'<br />' +
-                    "</b><img src=" +"http://openweathermap.org/img/wn/"+ 
+                    "</b><img src=" +"https://openweathermap.org/img/wn/"+ 
                     val.icon + "@2x.png></h2>" + '<div class="celsius">' + data.main.temp +  '<span class="gradus-icon">&deg;</span> '+'</div>'
                     + '<p class="clear-w">'+ val.main + ', ' + val.description +'</p>'
                     + '<nav class="nav">' +

@@ -14,11 +14,12 @@ $(document).ready(function(){
         
         $.ajax({
             url: 'https://api.openweathermap.org/data/2.5/weather/',
-            datatype: 'json',
+            datatype: 'xml',
             type: 'GET',
             data: {q:city, appid: key, units: 'metric'},
 
             success: function(data){
+<<<<<<< HEAD
                 //console.log(data)
                 var today = new Date()
                 var day   = today.getDay()
@@ -28,6 +29,9 @@ $(document).ready(function(){
                 var week = daylist[day]
                 var dd = today.getDate()
                 thisDay = dd+ ' ' + monthList[month]
+=======
+                // console.log(data)
+>>>>>>> 2f69716fc06f1af59450949064c8223786b744d6
                     var wf = ''
                 $.each(data.weather, function(index,val){
                     

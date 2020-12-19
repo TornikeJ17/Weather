@@ -10,21 +10,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>World Weather</h1>
-        <div class="row">
-        <input id="city" placeholder="Search...">
-        <button id="getWeather"><i class="fas fa-search"></i></button>
-        <div id="showHide">
-        <div class="weather-block" id="showWeather">
-            
-        </div>
+    <div class="site-content">
+        <div class="site-header">
+            <div class="container">
         
-    </div>
+        <div class="container">
+            <form action="#" class="find-location">
+                <input id="city" type="text" placeholder="Find your location...">
+                <input id="getWeather" type="submit" value="Find">
+            </form>
+           
+        </div>
+        <div id="showHide">
+
+                    <div class="forecast-table">
+                        <div class="weather-block" id="showWeather"></div>
+                    </div>
+                    
+
+
     
-    </div>
    </div>
-    
+   </div>
+   </div>
+   
     
     <script src="./js/index.js"></script>
 </body>

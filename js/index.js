@@ -20,21 +20,39 @@ $(document).ready(function(){
 
             success: function(data){
                 //console.log(data)
+                var today = new Date()
+                var day   = today.getDay()
+                var month = today.getMonth()
+                var monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+                var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"]
+                var week = daylist[day]
+                var dd = today.getDate()
+                thisDay = dd+ ' ' + monthList[month]
                     var wf = ''
                 $.each(data.weather, function(index,val){
                     
-                    wf += '<h2><b>' + data.name + ', ' +data.sys.country +'<br />' +
-                    "</b><img src=" +"https://openweathermap.org/img/wn/"+ 
-                    val.icon + "@2x.png></h2>" + '<div class="celsius">' + data.main.temp +  '<span class="gradus-icon">&deg;</span> '+'</div>'
-                    + '<p class="clear-w">'+ val.main + ', ' + val.description +'</p>'
-                    + '<nav class="nav">' +
-                    '<ul class="nav-link ">Wind <li><i class="fas fa-wind weather-icons"></i>'+  data.wind.speed +'</li></ul>' +
-                    '<ul class="nav-link ">Cloud <li><i class="fas fa-cloud weather-icons"></i>'+  data.clouds.all +'</li></ul>'+
-                    '<ul class="nav-link ">Humidity <li><i class="fas fa-tint weather-icons"></i>'+  data.main.humidity +'</li></ul>' +
-                    '</nav>'
-
-                    
-                    
+                    wf += '<div class="container margin-c">'+
+                                '<div class="forecast-container">'+
+                                    '<div class="today forecast">'+
+                                        '<div class="forecast-header">'+
+                                        '<div class="day">'+ week +'</div>'+
+                                        '<div class="date">'+ thisDay +'</div>'+
+                                        '</div> <!-- .forecast-header -->'+
+                                        '<div class="forecast-content">'+
+                                            '<div class="location">'+ data.name + ','+ data.sys.country +'</div>'+
+                                            '<div class="degree">'+
+                                                '<div class="num">'+ data.main.temp +'<sup>o</sup>C</div>'+
+                                                    '<div class="forecast-icon">' +
+                                                        "<img class="+'margin-top'+" src=" +"https://openweathermap.org/img/wn/"+ 
+                                                        val.icon + "@2x.png></div>"+
+                                            '</div>'+
+                                            '<span><i class="fas fa-wind weather-icons"></i>'+   data.wind.speed +' km/h'+'</span>'+
+                                            '<span><i class="fas fa-cloud weather-icons"></i>'+  data.clouds.all +'</span>'+
+                                            '<span><i class="fas fa-tint weather-icons"></i>'+   data.main.humidity +'</span>'+
+                                        '</div>'+
+                                    '</div>'+
+                            '</div>'+
+                        '</div>'
                 })
                
                 $("#showWeather").html(wf)

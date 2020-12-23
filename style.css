@@ -271,7 +271,10 @@
      height: 0; }
    @media (min-width: 768px) {
      .container {
-       width: 750px; } }
+       width: 750px; }
+      .margin-c{
+        margin-top: 7rem;
+      } }
    @media (min-width: 992px) {
      .container {
        width: 970px; } }
